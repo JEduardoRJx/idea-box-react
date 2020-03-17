@@ -18,6 +18,21 @@ const IdeasContainer = ({ ideas, deleteIdea, toggleFavorite, viewFavorites }) =>
     }
   }
 
+  const renderCards = ideas => {
+    if (viewFavorites) {
+      return renderFavoriteCards(ideas);
+    } else if (ideas.length) {
+      return ideas.map(idea=> 
+        <Card key={idea.id}
+          idea={idea}
+          deleteIdea={deleteIdea}
+          toggleFavorite={toggleFavorite} />
+      );
+    } else {
+      return <h1>No Ideas! Create Some!</h1>;
+    }
+  }
+
   return (
     <section className='ideascontainer-section'>
 
