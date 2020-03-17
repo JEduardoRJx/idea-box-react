@@ -32,7 +32,13 @@ const Form = ({ submitIdea, numOfIdeas }) => {
 
   return (
     <form>
-
+      <label htmlFor='title'>Title:</label>
+      <input type='text' 
+        value={newIdea.title}
+        placeholder='Enter Title'
+        name='title'
+        onChange={e => handleChange(e)} />
+      <label htmlFor='description'>Description:</label>
     </form>
   );
 }
