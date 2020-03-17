@@ -9,6 +9,10 @@ const Form = ({ submitIdea, numOfIdeas }) => {
     fav: false
   });
 
+  const handleChange = (e) => {
+    createNewIdea({...newIdea, [e.target.name]: e.target.value});
+  }
+
 
   return (
     <form>
