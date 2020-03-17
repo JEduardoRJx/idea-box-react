@@ -13,6 +13,15 @@ const Form = ({ submitIdea, numOfIdeas }) => {
     createNewIdea({...newIdea, [e.target.name]: e.target.value});
   }
 
+  const addIdea = () => {
+    submitIdea({...newIdea, id: numOfIdeas + 1 });
+    createNewIdea({
+      id: null,
+      title: '',
+      description: ''
+    });
+  }
+
 
   return (
     <form>
