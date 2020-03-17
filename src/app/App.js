@@ -12,7 +12,6 @@ const App = () => {
     { id: 3, title: 'Write a Book', description: 'Write a childs book about planets', fav: false },
   ]);
 
-  console.log(ideas)
   return (
     <>
 
