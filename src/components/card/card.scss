@@ -20,6 +20,10 @@ article {
     border: none;
     border-radius: 5px;
     margin: 5px 10px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
