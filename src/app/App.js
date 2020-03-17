@@ -12,6 +12,10 @@ const App = () => {
     { id: 3, title: 'Write a Book', description: 'Write a childs book about planets', fav: false },
   ]);
 
+  const submitIdea = (newIdea) => {
+    updateIdeas([...ideas, newIdea]);
+  }
+
   return (
     <>
       <section className='form-wrapper'>
