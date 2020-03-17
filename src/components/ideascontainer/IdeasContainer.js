@@ -35,7 +35,7 @@ const IdeasContainer = ({ ideas, deleteIdea, toggleFavorite, viewFavorites }) =>
 
   return (
     <section className='ideascontainer-section'>
-
+      {renderCards(ideas)}
     </section>
   )
 }
