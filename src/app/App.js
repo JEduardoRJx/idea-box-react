@@ -20,7 +20,7 @@ const App = () => {
     const updatedIdeaList = ideas.filter(idea => idea.id !== id);
     updateIdeas([...updatedIdeaList]);
   }
-  
+
   const toggleFavorite = (id) => {
     let updatedIdeaList = ideas.map(idea => {
     if (idea.id === id) {
@@ -30,6 +30,10 @@ const App = () => {
     }
     });
     updateIdeas([...updatedIdeaList])
+  }
+
+  const toggleViewFavorites = () => {
+    updateViewFavorites(!viewFavorites);
   }
 
   return (
