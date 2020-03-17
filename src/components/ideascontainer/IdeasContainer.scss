@@ -5,3 +5,9 @@
   flex-wrap: wrap;
   background-color: #b0c8d7;
 }
+
+@media screen and (max-width: 720px) {
+  .ideascontainer-section {
+    justify-content: center;
+  }
+}
