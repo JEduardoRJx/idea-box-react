@@ -23,4 +23,16 @@ form {
     resize: none;
   }
 
+  button {
+    height: 30px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.25em;
+    &:hover {
+      background-color: #715470;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
 }
