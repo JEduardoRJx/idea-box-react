@@ -29,7 +29,6 @@ const Form = ({ submitIdea, numOfIdeas }) => {
     }
   }
 
-
   return (
     <form>
       <label htmlFor='title'>Title:</label>
