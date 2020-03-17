@@ -12,9 +12,44 @@ const App = () => {
     { id: 3, title: 'Write a Book', description: 'Write a childs book about planets', fav: false },
   ]);
 
+  const submitIdea = (newIdea) => {
+    updateIdeas([...ideas, newIdea]);
+  }
+
+  const deleteIdea = (id) => {
+    const updatedIdeaList = ideas.filter(idea => idea.id !== id);
+    updateIdeas([...updatedIdeaList]);
+  }
+
+  const toggleFavorite = (id) => {
+    let updatedIdeaList = ideas.map(idea => {
+    if (idea.id === id) {
+      return {...idea, fav: !idea.fav }
+    } else {
+      return idea
+    }
+    });
+    updateIdeas([...updatedIdeaList])
+  }
+
+  const toggleViewFavorites = () => {
+    updateViewFavorites(!viewFavorites);
+  }
+
   return (
     <>
-
+      <section className='form-wrapper'>
+        <h1>IdeaBox</h1>
+        <Form submitIdea={submitIdea}
+          numOfIdeas={ideas.length} />
+        <button className='fav-btn'
+          type='button'
+          onClick={() => toggleViewFavorites()}>View Favorites</button>
+      </section>
+        <IdeasContainer ideas={ideas} 
+          deleteIdea={deleteIdea} 
+          toggleFavorite={toggleFavorite} 
+          viewFavorites={viewFavorites} />
     </>
   )
 }
