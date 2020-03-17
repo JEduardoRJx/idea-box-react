@@ -14,7 +14,18 @@ const App = () => {
 
   return (
     <>
-
+      <section className='form-wrapper'>
+        <h1>IdeaBox</h1>
+        <Form submitIdea={submitIdea}
+          numOfIdeas={ideas.length} />
+        <button className='fav-btn'
+          type='button'
+          onClick={() => toggleViewFavorites()}>View Favorites</button>
+      </section>
+        <IdeasContainer ideas={ideas} 
+          deleteIdea={deleteIdea} 
+          toggleFavorite={toggleFavorite} 
+          viewFavorites={viewFavorites} />
     </>
   )
 }
