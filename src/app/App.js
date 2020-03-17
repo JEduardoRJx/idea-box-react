@@ -20,6 +20,17 @@ const App = () => {
     const updatedIdeaList = ideas.filter(idea => idea.id !== id);
     updateIdeas([...updatedIdeaList]);
   }
+  
+  const toggleFavorite = (id) => {
+    let updatedIdeaList = ideas.map(idea => {
+    if (idea.id === id) {
+      return {...idea, fav: !idea.fav }
+    } else {
+      return idea
+    }
+    });
+    updateIdeas([...updatedIdeaList])
+  }
 
   return (
     <>
