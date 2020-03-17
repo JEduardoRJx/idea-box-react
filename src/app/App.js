@@ -16,6 +16,11 @@ const App = () => {
     updateIdeas([...ideas, newIdea]);
   }
 
+  const deleteIdea = (id) => {
+    const updatedIdeaList = ideas.filter(idea => idea.id !== id);
+    updateIdeas([...updatedIdeaList]);
+  }
+
   return (
     <>
       <section className='form-wrapper'>
