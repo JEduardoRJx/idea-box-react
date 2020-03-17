@@ -39,6 +39,12 @@ const Form = ({ submitIdea, numOfIdeas }) => {
         name='title'
         onChange={e => handleChange(e)} />
       <label htmlFor='description'>Description:</label>
+      <textarea type='text' 
+        value={newIdea.description}
+        placeholder='Enter Description'
+        name='description'
+        onChange={e => handleChange(e)} />
+        {renderButton()}
     </form>
   );
 }
