@@ -18,3 +18,21 @@ body {
   justify-content: space-around;
   background-color: #81a7c0
 }
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.fav-btn {
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.25em;
+  padding: 5px;
+  outline: none;
+  &:hover {
+    background-color: #efd6aa;
+    cursor: pointer;
+  }
+}
