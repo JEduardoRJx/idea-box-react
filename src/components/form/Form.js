@@ -22,6 +22,13 @@ const Form = ({ submitIdea, numOfIdeas }) => {
     });
   }
 
+  const renderButton = () => {
+    if (newIdea.title !== '' && newIdea.description !== '') {
+      return <button type='button'
+        onClick={() => addIdea()}>Create Idea</button>;
+    }
+  }
+
 
   return (
     <form>
