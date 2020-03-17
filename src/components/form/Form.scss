@@ -5,4 +5,13 @@ form {
   justify-content: space-between;
   border-radius: 10px;
   font-size: 1em;
+
+  input, textarea {
+    width: 100%;
+    font-size: 1em;
+    border:none;
+    box-shadow: none;
+    padding: 5px;
+  }
+
 }
